@@ -1,7 +1,10 @@
 <template>
   <transition name="el-zoom-in-top">
     <div class="el-table-filter" v-if="multiple" v-show="showPopper">
-      <div class="el-table-filter__content">
+        <div class="el-table-filter__content" v-if="filters.constructor === String">
+            <el-input v-model="filteredValue" placeholder="input"></el-input>
+        </div>
+      <div class="el-table-filter__content" v-else="">
         <el-checkbox-group class="el-table-filter__checkbox-group" v-model="filteredValue">
           <el-checkbox
             v-for="filter in filters"

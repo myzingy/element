@@ -174,7 +174,7 @@ export default {
     reserveSelection: Boolean,
     filterMethod: Function,
     filteredValue: Array,
-    filters: Array,
+    filters: [Array, String],
     filterPlacement: String,
     filterMultiple: {
       type: Boolean,
